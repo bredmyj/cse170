@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lost and Found - Wireframe</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:"Trebuchet MS","Gill Sans",sans-serif;color:#222;background:#fff;display:flex;flex-direction:column;min-height:100vh}
+main{flex:1}
+a{color:#222;text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible{outline:3px solid #2a6df4;outline-offset:2px}
+.ph{background:#e3e3e0;border:2px dashed #8a8a86;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#5f5f5b;font-size:13px;text-align:center}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.hdr{border-bottom:2px solid #333;background:#fff}
+.hin{display:flex;align-items:center;gap:24px;min-height:72px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px}
+.nav{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav a{padding:12px;font-size:15px}
+.nav a[aria-current]{border-bottom:3px solid #222}
+.nav .btn{border:2px solid #222;border-radius:6px;padding:10px 16px}
+.rep{position:relative}
+.menu{position:absolute;top:100%;left:0;width:190px;background:#fff;border:2px solid #333;border-radius:6px;z-index:5;display:none;flex-direction:column}
+.rep:hover .menu,.rep:focus-within .menu{display:flex}
+.menu a{padding:12px 14px;border-bottom:1px solid #bbb}
+.menu a:last-child{border-bottom:0}
+.sec{padding:40px 0 8px}
+h1{font-size:38px;margin:0 0 12px}
+h2{font-size:26px;margin:0 0 16px}
+.row{display:flex;gap:24px;flex-wrap:wrap}
+.big{flex:1 1 380px;min-height:170px;border:3px solid #222;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:30px;font-weight:700;text-align:center;padding:16px}
+.big small{font-size:15px;font-weight:400}
+.fill{background:#222;color:#fff}.fill:hover{text-decoration:none}
+.strip{display:flex;gap:16px;overflow-x:auto;padding-bottom:14px}
+.card{flex:0 0 220px;border:2px solid #333;border-radius:8px;padding:12px;background:#fff;display:flex;flex-direction:column;gap:8px}
+.card b{font-size:16px}.card span{font-size:14px;color:#444}.card u{font-size:14px}
+.info{flex:1 1 300px;display:flex;flex-direction:column;gap:14px;font-size:16px}
+.info b{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#555;margin-bottom:2px}
+.lines{display:flex;flex-direction:column;gap:10px;max-width:760px}.lines i{display:block;height:10px;background:#d6d6d2;border-radius:3px}
+.note{font-size:13px;color:#555;margin-top:10px}
+.ftr{background:#2b2b2b;color:#eee;margin-top:48px}
+.ftr a{color:#eee}
+.fcols{display:flex;gap:56px;flex-wrap:wrap;padding:36px 0 28px}
+.fcols h3{margin:0 0 12px;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#cfcfcf}
+.flist{display:flex;flex-direction:column;gap:10px;font-size:15px}
+.soc{display:flex;align-items:center;gap:10px}
+.disc{border-top:1px solid #666;padding:16px 0 20px;font-size:13px;color:#d4d4d4}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap"><div class="hin">
+<a href="#/home" class="brand"><span class="ph" style="width:40px;height:40px">LOGO</span>[SITE TITLE]</a>
+<nav class="nav" aria-label="Main">
+<a href="#/home" data-p="home">Home</a>
+<div class="rep"><a href="#/report-lost" aria-haspopup="true">Report &#9662;</a>
+<div class="menu"><a href="#/report-lost">Report Lost</a><a href="#/report-found">Report Found</a><a href="#/my-reports">My Reports</a></div></div>
+<a href="#/browse" data-p="browse">Browse Found</a>
+<a href="#/how-it-works" data-p="how-it-works">How It Works</a>
+<a href="#/about" data-p="about">About Us</a>
+<a href="#/login" class="btn" data-p="login">Login / Sign Up</a>
+</nav></div></div></header>
+
+<main id="view"></main>
+
+<footer class="ftr"><div class="wrap"><div class="fcols">
+<div><h3>Follow us</h3><div class="flist">
+<a href="#" class="soc" onclick="return false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#eee" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#eee"/></svg>Instagram [placeholder link]</a>
+<a href="#" class="soc" onclick="return false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#eee" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M13 20v-7h2.5M13 13h-2.5M13 13V9.5c0-1 .7-1.5 1.7-1.5H16"/></svg>Facebook [placeholder link]</a></div></div>
+<div><h3>Links</h3><div class="flist">
+<a href="#/how-it-works">How It Works</a><a href="#/privacy">Privacy and Lost Item Policy</a><a href="#/about-contact">Office Hours, Location and Contact</a></div></div>
+</div><div class="disc">Disclaimer: Student class project. Not an official BYU-Idaho service.</div></div></footer>
+
+<script>
+const pin='<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5f5f5b" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>';
+const contact='<div class="info" id="contact"><div><b>Office hours</b>[DAYS]: [OPEN] to [CLOSE]<br>[DAYS]: [OPEN] to [CLOSE]</div><div><b>Address</b>[OFFICE NAME]<br>[STREET ADDRESS]<br>Rexburg, ID [ZIP]</div><div><b>Contact</b>[PHONE NUMBER]<br>[EMAIL ADDRESS]</div></div>';
+const items=[["Black water bottle","Insulated bottle, found near the library."],["Blue backpack","Medium backpack with a front zipper pocket."],["Student ID card","ID card found by the student center."],["Earbud case","White wireless earbud case, no earbuds."],["Set of keys","Three keys on a ring with a red tag."],["Gray hoodie","Gray zip hoodie, adult medium."]];
+const cards=items.map(i=>`<a href="#/item" class="card"><span class="ph" style="height:110px">Item photo</span><b>${i[0]}</b><span>${i[1]}</span><u>View item &rarr;</u></a>`).join('');
+const team=[1,2,3,4].map(()=>'<div class="card" style="align-items:center;text-align:center;flex:1 1 200px"><span class="ph" style="width:96px;height:96px;border-radius:50%">Photo</span><b>[TEAM MEMBER NAME]</b><span>[ROLE]</span></div>').join('');
+const simple=(t,d,p)=>`<div class="wrap"><div class="sec"><h1>${t}</h1><p style="font-size:17px;max-width:720px;margin:0 0 28px;line-height:1.5">${d}</p><div class="ph" style="min-height:320px">${p}</div></div></div>`;
+const pages={
+home:['Home',`<div class="wrap"><div class="sec"><div class="row"><a href="#/report-lost" class="big fill">I lost something<small>Report a lost item</small></a><a href="#/report-found" class="big">I found something<small>Report a found item</small></a></div></div>
+<div class="sec"><h2>Recently found</h2><div class="strip">${cards}</div><div class="note">Scrolls sideways. Shows the 4 to 6 most recent items. Sample items are placeholders.</div></div>
+<div class="sec"><h2>Contact and Location</h2><div class="row"><div class="ph" style="flex:1 1 460px;min-height:300px">${pin}Mini map: office location</div>${contact}</div></div></div>`],
+about:['About Us',`<div class="wrap"><div class="sec"><h1>About Us</h1><div style="color:#555">[One-line intro placeholder]</div></div>
+<div class="sec"><h2>Our mission</h2><div class="lines"><i style="width:100%"></i><i style="width:96%"></i><i style="width:98%"></i><i style="width:70%"></i></div><div class="note">[Mission statement placeholder text]</div></div>
+<div class="sec"><h2>Team members</h2><div class="row">${team}</div></div>
+<div class="sec"><h2>Office hours, contact and location</h2><div class="row">${contact}<div class="ph" style="flex:1 1 460px;min-height:300px">${pin}Map: office location</div></div></div></div>`],
+'report-lost':['Report a Lost Item',simple('Report a Lost Item','Describe what you lost, where and when you last had it, and how to reach you. Staff will compare your report with items that have been turned in.','Lost item report form placeholder')],
+'report-found':['Report a Found Item',simple('Report a Found Item','Tell us what you found, where you found it, and where the item is now, for example turned in to the office.','Found item report form placeholder')],
+'my-reports':['My Reports',simple('My Reports','See the lost and found reports you have submitted and check the status of each one. Requires login.','List of your reports placeholder')],
+browse:['Browse Found Items',simple('Browse Found Items','Search and filter items that have been turned in, find a match for something you lost, and see how to claim it.','Searchable item grid placeholder')],
+'how-it-works':['How It Works',simple('How It Works','A short walkthrough of the process: report a lost item, we compare it with found items, and you pick it up at the office.','Step-by-step explainer placeholder')],
+login:['Login / Sign Up',simple('Login / Sign Up','Log in or create an account to submit reports and track their status.','Login and sign up form placeholder')],
+privacy:['Privacy and Lost Item Policy',simple('Privacy and Lost Item Policy','[Placeholder text] This page will explain how personal information is used and how long lost items are held before they are donated or discarded.','[Placeholder policy text]')],
+item:['Item Details',simple('Item Details','Shows one found item: photo, description, where and when it was found, and how to claim it.','Item photo and details placeholder')]
+};
+function route(){
+  let r=location.hash.replace('#/','')||'home', jump=false;
+  if(r==='about-contact'){r='about';jump=true}
+  if(!pages[r])r='home';
+  document.getElementById('view').innerHTML=pages[r][1];
+  document.title=pages[r][0]+' - Lost and Found Wireframe';
+  document.querySelectorAll('.nav a[data-p]').forEach(a=>a.dataset.p===r?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+  jump?document.getElementById('contact').scrollIntoView():window.scrollTo(0,0);
+}
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
